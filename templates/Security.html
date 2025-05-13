@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Question</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .ask {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        #timer {
+            font-size: 24px;
+            color: #ff5e57;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #eb5e3f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Security Verification</h1>
+        <form method="POST" action="{{ url_for('security') }}">
+            <div class="ask">
+                <label for="security_answer">Which is your favorite book?</label>
+                <input type="text" id="security_answer" name="security_answer" required placeholder="Enter your answer">
+            </div>
+            <h2 id="timer">10</h2>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let timerElement = document.getElementById('timer');
+        let timeLeft = 10;
+        let timer = setInterval(function () {
+            timerElement.textContent = timeLeft;
+            timeLeft--;
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                window.location.href = '/';  // redirect to home
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

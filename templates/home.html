@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #8e2de2, #352f41);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 380px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 120px;
+            padding: 12px 0;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+
+        .login-btn {
+            background-color: #4a00e0;
+        }
+
+        .login-btn:hover {
+            background-color: #3b00c9;
+        }
+
+        .register-btn {
+            background-color: #8e2de2;
+        }
+
+        .register-btn:hover {
+            background-color: #7319c2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>Please login or register to continue.</p>
+        <div>
+            <a href="/login" class="btn login-btn">Login</a>
+            <a href="/register" class="btn register-btn">Register</a>
+        </div>
+    </div>
+</body>
+</html>

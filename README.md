@@ -1,6 +1,6 @@
 # 💳 Facial Recognition for Secure Transactions
 
-This project implements a secure transaction system based on facial recognition using deep learning and computer vision techniques. It verifies a user's identity through webcam input before allowing a monetary transaction, adding an extra layer of biometric security.
+This project implements a secure transaction system based on facial recognition using deep learning and computer vision techniques. It verifies a user's identity through webcam input before allowing a monetary transaction, adding an extra layer of biometric security. There could be issues in conventional recognition systems where the access can be taken just by using their photographs. Therefore it has an integrated liveness detection.
 
 ## 🚀 Features
 
